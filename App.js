@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity, FlatList } from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation-stack";
+import { createStackNavigator } from "@react-navigation/stack";
 import { Entypo } from '@expo/vector-icons';
 import * as SQLite from "expo-sqlite";
 
@@ -55,7 +55,7 @@ function NotesScreen({ navigation }) {
       <FlatList
         data={notes}
         renderItem={renderItem}
-        style={{ width: "100%"}}
+        style={{ width: "100%" }}
       />
     </View>
   );
@@ -92,7 +92,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#ffc',
     alignItems: 'center',
     justifyContent: 'center',
   },
