@@ -81,13 +81,13 @@ export default function NotesScreen({ navigation, route }) {
                     justifyContent: "space-between" // this makes the trash icon move all the way to the right
                 }}
             >
-            <Text style={{ fontSize: 16, textAlign: "left" }}>{item.title}</Text>
-            <TouchableOpacity onPress={() => deleteNote(item.id)}>
-                <Ionicons
-                    name="trash"
-                    size={16}
-                    color="#944" />
-            </TouchableOpacity>
+                <Text style={{ fontSize: 16, textAlign: "left" }}>{item.title}</Text>
+                <TouchableOpacity onPress={() => deleteNote(item.id)}>
+                    <Ionicons
+                        name="trash"
+                        size={16}
+                        color="#944" />
+                </TouchableOpacity>
             </View>
         );
     }
