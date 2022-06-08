@@ -5,6 +5,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { Entypo } from '@expo/vector-icons';
 import * as SQLite from "expo-sqlite";
+import NotesStack from "./screens/NotesStack";
+import AddScreen from "./screens/AddScreen";
 
 const db = SQLite.openDatabase("notes.db");
 
@@ -16,12 +18,7 @@ function NotesScreen({ navigation }) {
   ]);
 
   function addNote() {
-    let newNote = {
-      title: "Sample new note",
-      done: false,
-      id: notes.length.toString(),
-    };
-    setNotes([...notes, newNote]);
+    navigation.navigate("Add Note");
   }
 
   // This adds the new note button in the header
